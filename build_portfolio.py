@@ -443,7 +443,7 @@ HTML = """<!DOCTYPE html>
     <div class="resume-card">
       <div class="resume-top">
         <p>Full resume below — download for the complete version, or scroll for a quick read.</p>
-        <a class="btn-download" href="Ankur_Chandrakar_Resume_Updated.docx" download>↓ Download Resume</a>
+        <a class="btn-download" href="Ankur_Chandrakar_Resume_APM.pdf" download>↓ Download Resume</a>
       </div>
 
       <div class="resume-block">
