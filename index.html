@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ankur Chandrakar — PM Portfolio | Retention • Growth • 0-to-1 • PRD</title>
-<meta name="description" content="Product Manager (QA background). Capstone on FD retention strategy + case studies in growth, 0-to-1 market sizing, and PRD authorship. Data-driven product decisions backed by SQL, Python, Tableau.">
+<meta name="description" content="Product Manager (QA background). Capstone on FD retention strategy + case studies in growth, 0-to-1 market sizing, PRD authorship, and data analysis. Data-driven product decisions backed by SQL, Python, Tableau.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -175,6 +175,18 @@
     content:''; position:absolute; left:0; top:0; bottom:0; width:3px;
     background:var(--accent); opacity:0.55;
   }
+  .ledger-group{
+    display:flex; align-items:baseline; flex-wrap:wrap; gap:6px 16px;
+    margin:34px 0 2px; padding-bottom:12px; border-bottom:1px solid var(--panel-line);
+  }
+  .ledger-group:first-child{ margin-top:0; }
+  .ledger-group h3{
+    font-family:var(--mono); font-size:13px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--accent); margin:0;
+  }
+  .ledger-group .lg-sub{ color:var(--text-muted); font-size:0.92rem; }
+  .ledger-group.data h3{ color:var(--amber); }
+  .ticket.data::before{ background:var(--amber); }
   .ticket:hover{ border-color:var(--accent-dim); transform:translateY(-3px); }
   .ticket-head{
     display:flex; align-items:center; flex-wrap:wrap; gap:14px 18px; margin-bottom:16px;
@@ -247,6 +259,7 @@
   .edu-row{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:10px 0;
     border-bottom:1px solid var(--panel-line); }
   .edu-row:last-child{ border-bottom:none; }
+  .edu-row.cert{ flex-direction:column; justify-content:flex-start; gap:4px; }
   .edu-name{ color:var(--text-primary); font-weight:500; font-size:0.96rem; }
   .edu-year{ font-family:var(--mono); font-size:12px; color:var(--text-muted); }
 
@@ -312,12 +325,17 @@
   <!-- CASE STUDIES -->
   <section id="case-studies">
     <div class="section-head">
-      <p class="section-tag">Case Studies · 04 Tickets Closed</p>
-      <h2>Four PM Case Studies — Real Problems, Real Data, Real Trade-Offs</h2>
-      <p class="section-desc">Spanning fintech retention (₹18Cr unlock), consumer app growth (+15-20% AOV), fitness engagement (60% churn fix), and mobility market sizing (260M underserved). Each includes research methodology, RICE/OKR framework, and the reasoning behind recommendations — not just the polished conclusion.</p>
+      <p class="section-tag">Case Studies · 08 Tickets Closed</p>
+      <h2>Eight Case Studies — Real Problems, Real Data, Real Trade-Offs</h2>
+      <p class="section-desc">Spanning fintech retention (₹18Cr unlock), consumer app growth (+15-20% AOV), fitness engagement (60% churn fix), and mobility market sizing (260M underserved). Each includes research methodology, RICE/OKR framework, and the reasoning behind recommendations — not just the polished conclusion. Four further data-analysis projects in Python and Tableau cover retail revenue concentration, cricket toss strategy, NGO aid clustering, and loan-default risk.</p>
     </div>
 
     <div class="ledger">
+
+      <div class="ledger-group">
+        <h3>Product Management · Cases 01–04</h3>
+        <span class="lg-sub">Airtribe PM Program — product strategy, PRDs, growth and market sizing</span>
+      </div>
 
       <article class="ticket">
         <div class="ticket-head">
@@ -375,6 +393,51 @@
         <div class="north-star"><span class="ns-label">North Star Metric</span><span class="ns-value">Serviceable Obtainable Market — ₹49 Cr in 3–5 Years</span></div>
       </article>
 
+      <div class="ledger-group data">
+        <h3>Data Analytics · Cases 05–08</h3>
+        <span class="lg-sub">PG Diploma in Data Science, IIIT Bangalore — Python, Tableau, EDA and clustering</span>
+      </div>
+
+      <article class="ticket data">
+        <div class="ticket-head">
+          <span class="tc-id">TC-05 · DATA ANALYSIS</span>
+          <span class="tc-status status-sized">~76% Revenue from Toys</span>
+        </div>
+        <h3>OList Retail — The Pareto Inventory Playbook</h3>
+        <p class="blurb">A Pareto and market-basket analysis of OList retail data to show where inventory effort pays off most. Toys drive about 76% of revenue and account for 16 of the top 20 products by revenue. Skills used: Tableau · Market Basket Analysis · Pareto Analysis · Excel.</p>
+        <div class="north-star"><span class="ns-label">Key Finding</span><span class="ns-value">Toys — ~76% of Revenue, 16 of Top 20 Products</span></div>
+      </article>
+
+      <article class="ticket data">
+        <div class="ticket-head">
+          <span class="tc-id">TC-06 · DATA ANALYSIS</span>
+          <span class="tc-status status-verified">~50% Toss Win Rate</span>
+        </div>
+        <h3>IPL Decoded — Toss, Runs &amp; Wickets</h3>
+        <p class="blurb">An analysis of 10 IPL seasons to test whether winning the toss actually wins matches. Toss winners won only about 50% of matches, so there is no real toss edge, even though most captains chose to field first. Skills used: Tableau · Data Visualisation · Sports Analytics.</p>
+        <div class="north-star"><span class="ns-label">Key Finding</span><span class="ns-value">Toss Winners Won ~50% of Matches — No Real Toss Edge</span></div>
+      </article>
+
+      <article class="ticket data">
+        <div class="ticket-head">
+          <span class="tc-id">TC-07 · DATA ANALYSIS</span>
+          <span class="tc-status status-scoped">167 Countries → 5 Clusters</span>
+        </div>
+        <h3>Aid Where It Matters Most — Clustering for NGO Funding</h3>
+        <p class="blurb">A clustering analysis to help an NGO decide where funding should go first. I segmented 167 countries into 5 clusters and shortlisted the top 5 countries most in need of aid. Skills used: Python · K-Means · Hierarchical Clustering · Silhouette &amp; Elbow.</p>
+        <div class="north-star"><span class="ns-label">Key Finding</span><span class="ns-value">167 Countries Segmented into 5 Clusters — Top 5 Most in Need Shortlisted</span></div>
+      </article>
+
+      <article class="ticket data">
+        <div class="ticket-head">
+          <span class="tc-id">TC-08 · DATA ANALYSIS</span>
+          <span class="tc-status status-shipped">Top Default Predictor</span>
+        </div>
+        <h3>Credit EDA — Spotting Defaulters Before They Default</h3>
+        <p class="blurb">An exploratory data analysis of loan-default risk, aimed at spotting likely defaulters before they default. After data cleaning and bivariate analysis, the external credit score emerged as the strongest predictor of default. Skills used: Python · EDA · Data Cleaning · Bivariate Analysis.</p>
+        <div class="north-star"><span class="ns-label">Key Finding</span><span class="ns-value">External Credit Score — Strongest Default Predictor</span></div>
+      </article>
+
     </div>
   </section>
 
@@ -401,6 +464,29 @@
         </div>
       </div>
       <div class="skill-cat">
+        <h3>Product Delivery</h3>
+        <div class="pill-row">
+          <span class="pill">Roadmap Definition</span>
+          <span class="pill">Product Requirements</span>
+          <span class="pill">User Stories &amp; Acceptance Criteria</span>
+          <span class="pill">Backlog Grooming</span>
+          <span class="pill">Release Readiness</span>
+          <span class="pill">Stakeholder Alignment</span>
+          <span class="pill">Defect Triage</span>
+          <span class="pill">Cross-functional Delivery</span>
+        </div>
+      </div>
+      <div class="skill-cat">
+        <h3>Product Research</h3>
+        <div class="pill-row">
+          <span class="pill">User Interviews</span>
+          <span class="pill">Research Synthesis</span>
+          <span class="pill">Competitive Analysis</span>
+          <span class="pill">Figma Design Review</span>
+          <span class="pill">User-Centered Product Discovery</span>
+        </div>
+      </div>
+      <div class="skill-cat">
         <h3>Analytics</h3>
         <div class="pill-row">
           <span class="pill">AARRR Funnel</span>
@@ -419,6 +505,8 @@
           <span class="pill">Figma</span>
           <span class="pill">Wireframing</span>
           <span class="pill">Accessibility Testing</span>
+          <span class="pill">User Research</span>
+          <span class="pill">Cross-Browser &amp; Device Testing</span>
         </div>
       </div>
       <div class="skill-cat">
@@ -432,10 +520,22 @@
         </div>
       </div>
       <div class="skill-cat">
+        <h3>Analytical Methods</h3>
+        <div class="pill-row">
+          <span class="pill">K-Means Clustering</span>
+          <span class="pill">Hierarchical Clustering</span>
+          <span class="pill">Silhouette &amp; Elbow Method</span>
+          <span class="pill">Pareto Analysis</span>
+          <span class="pill">Market Basket Analysis</span>
+          <span class="pill">Bivariate Analysis</span>
+        </div>
+      </div>
+      <div class="skill-cat">
         <h3>Tools</h3>
         <div class="pill-row">
           <span class="pill">JIRA</span>
           <span class="pill">Bugzilla</span>
+          <span class="pill">Agentic AI</span>
           <span class="pill">Survey Monkey</span>
           <span class="pill">Google Forms</span>
           <span class="pill">Stakeholder Management</span>
@@ -509,9 +609,25 @@
           <span class="edu-name">B.E. in Computer Science — CMRIT College, Bangalore</span>
           <span class="edu-year">2015</span>
         </div>
-        <div class="edu-row">
-          <span class="edu-name">Airtribe PM Program — B2C and B2B/SaaS Case Studies</span>
-          <span class="edu-year">2026</span>
+      </div>
+
+      <div class="resume-block">
+        <h4>Certifications</h4>
+        <div class="edu-row cert">
+          <span class="edu-name">AI for Product Managers — Airtribe PM Program</span>
+          <span class="edu-year">Product Management &amp; AI</span>
+        </div>
+        <div class="edu-row cert">
+          <span class="edu-name">Tableau — UC Davis Program</span>
+          <span class="edu-year">Data &amp; Analytics</span>
+        </div>
+        <div class="edu-row cert">
+          <span class="edu-name">Power BI — Microsoft Program</span>
+          <span class="edu-year">Data &amp; Analytics</span>
+        </div>
+        <div class="edu-row cert">
+          <span class="edu-name">Accessibility Testing — Isha Training Solutions Program</span>
+          <span class="edu-year">E-Learning &amp; Content Authoring</span>
         </div>
       </div>
     </div>
